@@ -4,6 +4,11 @@ I tried to create model for speech recognition, based on several guides.
 I used the LJSpeech dataset to train the model.
 
 
+evaluation results:
+test loss in final version of model ≈ 102
+word error rate ≈ 0.76
+
+
 prediction examples:
   prediction: end quote afterd the fhr shot te quote braved that o mersyta lap end quote<END>
   real:       end quote after the third shot he quote revved that motorcycle up end quote<END>
@@ -15,6 +20,4 @@ prediction examples:
 	real:       would be consistent with the period when the oswalds were living on neely street since the apartment was rented on march three nineteen sixtythree<END>
 
 
-evaluation results:
-test loss in final version of model ≈ 102
-word error rate ≈ 0.76
+
