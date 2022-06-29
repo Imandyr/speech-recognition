@@ -1,12 +1,11 @@
 # speech-recognition
 I tried to create model for speech recognition, based on several guides.
 
-I used the LJSpeech dataset to train the model.
+used the LJSpeech dataset to train the model.
 
 
 evaluation results:
-test loss in final version of model ≈ 102
-word error rate ≈ 0.76
+test loss in final version of model ≈ 102; word error rate ≈ 0.76
 
 
 prediction examples:
