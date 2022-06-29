@@ -7,38 +7,12 @@ import random
 import time
 import os
 import numpy as np
-import itertools
-from glob import glob
-import shutil
-import re
-from importlib import reload
-import pylab as p
-import scipy
-import matplotlib
-from matplotlib import pyplot as plt
-from matplotlib import pylab
-import pandas as pd
-from IPython import display
 import jiwer
-import librosa
-from PIL import Image
-import imageio
 import cv2
-import skimage # scikit-image
-from natsort import natsorted
-import tensorflow as tf
 from tensorflow import keras
-from keras import layers
 from keras import models
 from keras import preprocessing
 from keras import Model
-from keras import Input
-from keras import optimizers
-from keras import callbacks
-from keras import applications
-from keras import regularizers
-from keras import initializers
-from keras import activations
 from keras import backend as K
 
 
@@ -133,7 +107,7 @@ for c1, input_data in enumerate(test_gen):
             break
         time.sleep(0.01)
 
-    # all 1300 test images has gone
+    # when all 1300 test images has gone
     if c1 == 65:
         # wer score (Calculate word error rate on all test data)
         wer_score = jiwer.wer(y_real_list, y_pred_list)
