@@ -1,7 +1,7 @@
 # speech-recognition
 I tried to create model for speech recognition, based on several guides.
 
-I will use the LJSpeech dataset to train model.
+will use the LJSpeech dataset to train model.
 
 
 # evaluation results:
