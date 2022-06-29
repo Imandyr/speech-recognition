@@ -3,43 +3,10 @@ import common_functions
 from data_generator import base_data_gen
 import transformer_model
 
-import random
-import time
-import os
-import numpy as np
-import itertools
-from glob import glob
-import shutil
-import re
-from importlib import reload
-import pylab as p
-import scipy
-import matplotlib
 from matplotlib import pyplot as plt
-from matplotlib import pylab
-import pandas as pd
-from IPython import display
-from jiwer import wer
-import librosa
-from PIL import Image
-import imageio
-import cv2
-import skimage # scikit-image
-from natsort import natsorted
-import tensorflow as tf
 from tensorflow import keras
-from keras import layers
 from keras import models
-from keras import preprocessing
-from keras import Model
-from keras import Input
-from keras import optimizers
 from keras import callbacks
-from keras import applications
-from keras import regularizers
-from keras import initializers
-from keras import activations
-from keras import backend as K
 
 
 # params
@@ -76,8 +43,8 @@ model.summary()
 # callbacks
 callbacks_list = [callbacks.ModelCheckpoint("speech_recognition_transformer_9.3.4.5_v3.h5", monitor='val_loss',
                                             save_best_only=True), # , save_weights_only=True
-                  callbacks.EarlyStopping(monitor="val_loss", patience=10),
-                  callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.0000001),
+                  callbacks.EarlyStopping(monitor="val_loss", patience=20),
+                  callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=10, min_lr=0.0000001),
                   callbacks.TensorBoard(log_dir='tensor_board_dir', write_images=True, write_graph=True,
                                         write_steps_per_second=True)
                   ]
